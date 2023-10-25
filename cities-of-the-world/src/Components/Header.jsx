@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import {Link} from "react-router-dom";
+
 
 const Navbar = () => {
     const [isNavVisible, setNavVisible] = useState(false);
@@ -10,6 +12,11 @@ const Navbar = () => {
 
   return (
     <>
+  
+      <nav className="relative flex w-full flex-nowrap items-center justify-between bg-[#d4a373] py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-[#93b9d3] lg:flex-wrap lg:justify-start lg:py-4">
+        {/* ... Your Navbar Content ... */}
+      </nav>
+
     <nav
   className="relative flex w-full flex-nowrap items-center justify-between bg-[#d4a373] py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-[#93b9d3] lg:flex-wrap lg:justify-start lg:py-4"
   data-te-navbar-ref=""
@@ -63,53 +70,31 @@ const Navbar = () => {
           className="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1"
           data-te-nav-item-ref=""
         >
-          <a
-            className="text-white transition duration-200 hover:text-white hover:ease-in-out focus:text-white disabled:text-black/30 motion-reduce:transition-none dark:text-white-200 dark:hover:text-white-400 dark:focus:text-white-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-white-400"
-            aria-current="page"
-            href="#"
-            data-te-nav-link-ref=""
-          >
-            Home
-          </a>
+          <Link className='text-white m-3' to="/">Home</Link>
         </li>
         {/* Features link */}
         <li
           className="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
           data-te-nav-item-ref=""
         >
-          <a
-            className="p-0 text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-            href="#"
-            data-te-nav-link-ref=""
-          >
-            Features
-          </a>
+          <Link className='text-white m-3' to="/features">Features </Link>
+
         </li>
         {/* Pricing link */}
         <li
           className="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
           data-te-nav-item-ref=""
         >
-          <a
-            className="p-0 text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-            href="#"
-            data-te-nav-link-ref=""
-          >
-            Pricing
-          </a>
+          <Link className='text-white m-3' to="/Pricing">Pricing </Link>
+
         </li>
         {/* About link */}
         <li
           className="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1"
           data-te-nav-item-ref=""
         >
-          <a
-            className="p-0 text-white transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-            href="#"
-            data-te-nav-link-ref=""
-          >
-            About
-          </a>
+        <Link className='text-white m-3' to="/About">About </Link>
+
         </li>
       </ul>
 
